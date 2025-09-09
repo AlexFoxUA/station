@@ -40,10 +40,9 @@ class CarWashStation:
 
     def wash_single_car(self, car: Car) -> None:
         """
-        Wash a single car if its clean_mark < station clean_power.
+        Wash a single car. Assumes caller already checked if car needs washing.
         """
-        if car.clean_mark < self.clean_power:
-            car.clean_mark = self.clean_power
+        car.clean_mark = self.clean_power
 
     def serve_cars(self, cars: List[Car]) -> float:
         """
